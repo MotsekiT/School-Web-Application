@@ -1,0 +1,241 @@
+﻿
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Techtronics</title>
+
+    <link rel="stylesheet" href="~/Content/styles/nav.css">
+    <link rel="stylesheet" href="~/Content/styles/common.css">
+    <link rel="stylesheet" href="~/Content/styles/homepage.css">
+    <link rel="stylesheet" href="~/Content/styles/footer.css">
+    <link rel="stylesheet" href="~/Content/styles/pagecontainer.css">
+    <link rel="stylesheet" href="~/Content/styles/skewed.css">
+
+    <link rel="stylesheet" href="~/Content/styles/buttons.css">
+    <link rel="stylesheet" href="~/Content/styles/description.css">
+    <link href="~/Content/styles/styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/Content/fontawesome/css/all.css">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu+Condensed&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha384-VouDlk1MOU5L1G5kW5PdSk2e3pYH27bM4GNw6mlz8z6UZ3agMlP5TOFD01QZd9l7" crossorigin="anonymous">
+
+
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+
+
+</head>
+<body>
+
+
+    <div class="navbar navbar-expand-lg" style="background-color: #e3f2fd;">
+        <div class="container px-4">
+
+
+
+            <img src="~/Content/images/new/logo.png" alt="logo" width="288" height="110">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCenteredExample"
+                    aria-controls="navbarCenteredExample" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav btn-group-horizontal text-center">
+
+
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("About", "About", "Home")</li>
+                    <li>@Html.ActionLink("FAQ", "Index", "FAQ")</li>
+                    <li>@Html.ActionLink("Contact", "Create", "Contact")</li>
+
+
+
+
+                    @if (Session["Email"] == null)
+                    {
+                        <li>@Html.ActionLink("Sign Up", "SignUp", "Account")</li>
+                        <li>@Html.ActionLink("Login", "Login", "Account")</li>
+                    }
+                    else if (Session["AccessRight"] != null)
+                    {
+                        if (Session["AccessRight"].ToString() == "User")
+                        {
+
+                            @*<div class="nav-link">
+
+                    @Html.ActionLink("Category", "Index", "Category")
+                </div>*@
+                            <li>@Html.ActionLink("Apply", "Create", "Apply")</li>
+
+
+                        }
+                        else if (Session["AccessRight"].ToString() == "Admin")
+                        {
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-dark dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Admin Control Panel
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-right">
+                                    @Html.ActionLink("Messages logs", "Index", "Contact")
+                                    <br />
+                                    @Html.ActionLink("List of Parents", "Index", "Apply")
+                                    <br />
+                                    @Html.ActionLink("List of Learners", "Index", "Learner")
+                                    <br />
+                                    @Html.ActionLink("List of Schools", "Index", "Schools")
+                                    <br />
+
+                                  
+                                </div>
+                            </div>
+                        }
+                    }
+
+
+                    @if (Session["Email"] != null)
+                    {
+                        <div class="nav-link" style="padding-left: 25px;">
+                            @Html.ActionLink(Session["Email"].ToString() + " LogOut", "LogOff", "Account")
+                        </div>
+                    }
+
+
+
+
+                </ul>
+            </div>
+        </div>
+    </div>
+   
+
+
+
+    @*header ends*@
+    <div class="navbar navbar-inverse navbar-fixed-top" hidden>
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+
+
+
+                </button>
+                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("About", "About", "Home")</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("Messages", "Index", "Contact")</li>
+                    <li>@Html.ActionLink("SignUp", "SignUp", "Account")</li>
+                    <li>@Html.ActionLink("Login", "Login", "Account")</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div>
+
+        @RenderBody()
+
+        <hr />
+
+    </div>
+
+    <footer class="footer_area section_padding_130_0">
+        <div class="container">
+            <div class="row">
+                <!-- Single Widget-->
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="single-footer-widget section_padding_0_130">
+                        <!-- Footer Logo-->
+                        <img src="~/Content/images/new/logo.png" alt="logo" width="288" height="110">
+                        <div class="footer-logo mb-3"></div>
+                        <p>Department of Free State, Education</p>
+                        <!-- Copywrite Text-->
+                        <div class="copywrite-text mb-5">
+                            <p class="mb-0">Education <i class="lni-heart mr-1"></i>by<a class="ml-1" href="" style="color: white;">DFS</a></p>
+                        </div>
+                        <!-- Footer Social Area-->
+                        @*<div class="footer_social_area">
+                            <a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Facebook">
+                                <i class="fa fa-facebook" style="color: white;"></i>
+                            </a>
+                            <a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Twitter">
+                                <i class="fa fa-twitter" style="color: white;"></i>
+                            </a>
+                            <a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Google">
+                                <i class="fa fa-google" style="color: white;"></i>
+                            </a>
+                            <a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="LinkedIn">
+                                <i class="fa fa-linkedin" style="color: white;"></i>
+                            </a>
+                        </div>*@
+                    </div>
+                </div>
+                <!-- Single Widget-->
+                <div class="col-12 col-sm-6 col-lg">
+                    <div class="single-footer-widget section_padding_0_130">
+                        <!-- Widget Title-->
+                        <h5 class="widget-title" style="color: white;">About</h5>
+                        <!-- Footer Menu-->
+                        <div class="footer_menu">
+                            <ul>
+                                <li><a href="#" style="color: white;">About us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- Single Widget-->
+                <div class="col-12 col-sm-6 col-lg">
+                    <div class="single-footer-widget section_padding_0_130">
+                        <!-- Widget Title-->
+                        <h5 class="widget-title" style="color: white;">FAQs</h5>
+                        <!-- Footer Menu-->
+                        <div class="footer_menu">
+                            <ul>
+                                <li><a href="#" style="color: white;">Frequently Asked Questions</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- Single Widget-->
+                <div class="col-12 col-sm-6 col-lg">
+                    <div class="single-footer-widget section_padding_0_130 ">
+                        <!-- Widget Title-->
+                        <h5 class="widget-title" style="color: white;">Contact</h5>
+                        <!-- Footer Menu-->
+                        <div class="footer_menu">
+                            <ul>
+                                <li><a href="#" style="color: white;">Call Centre</a></li>
+                                <li><a href="#" style="color: white;">Email Us</a></li>
+                                <li><a href="#" style="color: white;">Term &amp; Conditions</a></li>
+                                <li><a href="#" style="color: white;">Help Center</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                @*<div class="justify-content-center">
+                        <p>&copy; @DateTime.Now.Year - CRUD Operations with Firebase DataStore</p>
+                    </div>*@
+            </div>
+        </div>
+    </footer>
+
+    @*end footer*@
+
+
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+
+
+</body>
+</html>

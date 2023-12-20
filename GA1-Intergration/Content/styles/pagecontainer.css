@@ -1,0 +1,32 @@
+/*
+220000213 M Tshabalala
+219014331 SL Hadebe
+219007267 MP Tsoaela    
+*/
+.page-container {
+    display: relative;
+    justify-content: center;
+    height: 400px;
+    overflow: hidden;
+   
+}
+.page-container > .content-wrapper {
+        width: 1000px;
+        
+}
+
+.page-container > .content-wrapper > #deal {
+      width: 350px;
+    margin: 25px 40px 20px 0px;
+  float: left;
+  border: 2px solid gray;
+            
+            
+ }
+
+.page-container>.content-wrapper P {
+
+    letter-spacing: 1px;
+    line-height: 30px;
+    text-align: justify;
+}

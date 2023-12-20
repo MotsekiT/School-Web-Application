@@ -1,0 +1,94 @@
+﻿@model GA1_Intergration.Models.Learner
+
+@{
+    ViewBag.Title = "Detail";
+}
+
+
+
+<div class="card mx-auto" style="width: 50%;">
+    <div class="card-body">
+        <h2>Detail</h2>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.first_Name)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.first_Name)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.last_Name)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.last_Name)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.gender)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.gender)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.idNumber)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.idNumber)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.homeLanguage)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.homeLanguage)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.address)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.address)
+            </dd>
+
+         
+
+            <dt>
+                @Html.DisplayNameFor(model => model.town)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.town)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.postal)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.postal)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.disabilities)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.disabilities)
+            </dd>
+
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</div>

@@ -1,0 +1,67 @@
+/*
+220000213 M Tshabalala
+219014331 SL Hadebe
+219007267 MP Tsoaela    
+*/
+.footer {
+    background-color: #321F28;
+    color: #cbcbcb;
+    font-family: "Ubuntu Condensed", "sans-serif";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 300px;
+
+
+}
+
+.footer>.footer-logo img {
+    width: 180px;
+    height: 100%;
+    border-radius: 50%;
+
+}
+
+.footer>.footer-hours span {
+
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 1em;
+    letter-spacing: 2px;
+}
+
+.footer>.footer-hours>.hours {
+    font-size: 0.8em;
+    color: #9C3D54;
+
+}
+
+.footer>.links-wrapper {
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 400px;
+
+}
+
+.footer>.social-media-icons {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    width: 300px;
+    display: flex;
+
+    justify-content: space-between;
+
+}
+
+.footer>.social-media-icons a {
+    font-size: 1.5em;
+    color: whitesmoke;
+    transition: 0.5s;
+}
+
+.footer>.social-media-icons a:hover {
+    color: #C84B31;
+
+}

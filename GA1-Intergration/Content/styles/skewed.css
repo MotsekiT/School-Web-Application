@@ -1,0 +1,72 @@
+/*
+220000213 M Tshabalala
+219014331 SL Hadebe
+219007267 MP Tsoaela    
+*/
+.skewed-header {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+}
+
+.skewed-header > .header-background {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        transform: skewY(-6deg);
+        transform-origin: top left;
+        filter: brightness(55%);
+}
+.skewed-header > .skewed-header-wrapper {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        /*viewport*/
+        width: 100vm;
+}
+
+.skewed-header > .skewed-header-wrapper > .skewed-header-content {
+            width: 1000px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+}
+
+.skewed-header > .skewed-header-wrapper > .skewed-header-content > .heading-wrapper {
+background-color: #E2703A;
+color: black;
+border-bottom-left-radius: 4px;
+border-bottom-right-radius: 4px;
+width: 175px;
+padding: 10px;
+text-align: center;
+}
+
+.links-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.links-wrapper > .nav-link a {
+        font-family: 'Ubuntu Condensed', 'sans-serif';
+        color: whitesmoke;
+        text-decoration: none;
+        /*Animation*/
+        transition: 0.5s;
+}
+.links-wrapper > .nav-link a:hover {
+            color: #E2703A;
+            letter-spacing: 2px;
+}
+
+.nav-link {
+    width: 70px;
+    text-align: center;
+}
+

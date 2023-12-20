@@ -1,0 +1,123 @@
+﻿@model GA1_Intergration.Models.Schools
+
+@{
+    ViewBag.Title = "Detail";
+}
+
+<div class="card mx-auto" style="width: 50%;">
+    <div class="card-body">
+        <h2>Detail</h2>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.currentSchool)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.currentSchool)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.currentGrade)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.currentGrade)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Language)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Language)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.District)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.District)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.currentSchool_1)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.currentSchool_1)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.currentGrade_1)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.currentGrade_1)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.District_1)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.District_1)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.currentSchool_2)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.currentSchool_2)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.currentGrade_2)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.currentGrade_2)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.District_2)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.District_2)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.currentSchool_3)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.currentSchool_3)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.currentGrade_3)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.currentGrade_3)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.District_3)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.District_3)
+            </dd>
+
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</div>
+

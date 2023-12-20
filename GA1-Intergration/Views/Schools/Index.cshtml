@@ -1,0 +1,105 @@
+﻿@model IEnumerable<GA1_Intergration.Models.Schools>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>List of Schools Applied To:</h2>
+
+@*<p>
+    @Html.ActionLink("Create New", "Create")
+</p>*@
+<table class="table table-striped">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.currentSchool)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.currentGrade)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Language)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.District)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.currentSchool_1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.currentGrade_1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.District_1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.currentSchool_2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.currentGrade_2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.District_2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.currentSchool_3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.currentGrade_3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.District_3)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td class="table-info">
+            @Html.DisplayFor(modelItem => item.currentSchool)
+        </td>
+        <td class="table-primary">
+            @Html.DisplayFor(modelItem => item.currentGrade)
+        </td>
+        <td class="table-secondary">
+            @Html.DisplayFor(modelItem => item.Language)
+        </td>
+        <td class="table-success">
+            @Html.DisplayFor(modelItem => item.District)
+        </td>
+        <td class="table-danger">
+            @Html.DisplayFor(modelItem => item.currentSchool_1)
+        </td>
+        <td class="table-warning">
+            @Html.DisplayFor(modelItem => item.currentGrade_1)
+        </td>
+        <td class="table-info">
+            @Html.DisplayFor(modelItem => item.District_1)
+        </td>
+        <td class="table-light">
+            @Html.DisplayFor(modelItem => item.currentSchool_2)
+        </td>
+        <td class="table-success">
+            @Html.DisplayFor(modelItem => item.currentGrade_2)
+        </td>
+        <td class="table-primary">
+            @Html.DisplayFor(modelItem => item.District_2)
+        </td>
+        <td class="table-success">
+            @Html.DisplayFor(modelItem => item.currentSchool_3)
+        </td>
+        <td class="table-warning">
+            @Html.DisplayFor(modelItem => item.currentGrade_3)
+        </td>
+        <td class="table-light">
+            @Html.DisplayFor(modelItem => item.District_3)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Detail", "Detail", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

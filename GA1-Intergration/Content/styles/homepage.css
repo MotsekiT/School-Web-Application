@@ -1,0 +1,119 @@
+
+/*
+220000213 M Tshabalala
+219014331 SL Hadebe
+219007267 MP Tsoaela    
+*/
+
+.background-image {
+    background-image: url(../images/background/back1.jpg);
+    padding: 100px;
+    height: 200px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+   
+}
+
+.background-image>.top-heading {
+    padding: 1px 20px;
+    background-color: #734046;
+    color: white;
+    float: right;
+    width: 290px;
+    border-radius: 4px;
+    margin-right: 10px;
+
+}
+
+.background-image>.bottom-heading {
+    padding: 1px 20px;
+    background-color: #A05344;
+    color: white;
+    width: 290px;
+    float: right;
+    border-radius: 4px;
+    margin-right: 20px;
+
+}
+
+.background-image>.middle-center-heading {
+    padding: 1px 20px;
+    background-color: #734046;
+    color: white;
+    width: 290px;
+    float: right;
+    border-radius: 4px;
+    margin-right: 20px;
+    transition: 10s;
+}
+
+.background-image>.middle-left-heading {
+    padding: 1px 20px;
+    background-color: #A05344;
+    color: white;
+    width: 290px;
+    float: right;
+    border-radius: 4px;
+    margin-right: 20px;
+
+}
+
+.services-section {
+    height: 200px;
+    background-color: #39311D;
+    border-top: 10px whitesmoke;
+    color: black;
+    padding: 100px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: "Ubuntu Condensed", "sans-serif";
+}
+
+.services-section>.column-wrapper {
+
+    padding: 200px;
+    Text-align: 20px;
+    border-bottom: 5px solid transparent;
+    border-radius: 10px;
+    transition: 1s;
+    text-align: center;
+
+}
+
+.services-section>.column-wrapper>.column {
+    width: 200px;
+    height: 100px;
+    background: #39311D;
+    position: relative;
+    animation: mymove 5s infinite;
+
+}
+
+.services-section>.column-wrapper>.column :nth-child(1) {
+    font-size: 3em;
+
+}
+
+.services-section>.column-wrapper>.column :nth-child(2) {
+    font-size: 1.5em;
+    font-weight: 800;
+
+
+}
+
+
+
+
+@keyframes mymove {
+    from {
+        left: 0px;
+    }
+
+    to {
+        left: 200px;
+    }
+}

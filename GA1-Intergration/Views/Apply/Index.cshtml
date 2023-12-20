@@ -1,0 +1,91 @@
+﻿@model IEnumerable<GA1_Intergration.Models.Parent>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>List of Parents Applied For Their Children:</h2>
+
+
+<table class="table table-striped">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.firstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IdNo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.gender)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cellNo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.city)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.province)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.postal)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.relationship)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.employement)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td class="table-info">
+            @Html.DisplayFor(modelItem => item.firstName)
+        </td>
+        <td class="table-primary">
+            @Html.DisplayFor(modelItem => item.lastName)
+        </td>
+        <td class="table-secondary">
+            @Html.DisplayFor(modelItem => item.IdNo)
+        </td>
+        <td class="table-success">
+            @Html.DisplayFor(modelItem => item.gender)
+        </td>
+        <td class="table-danger">
+            @Html.DisplayFor(modelItem => item.cellNo)
+        </td>
+        <td class="table-warning">
+            @Html.DisplayFor(modelItem => item.address)
+        </td>
+        <td class="table-info">
+            @Html.DisplayFor(modelItem => item.city)
+        </td>
+        <td class="table-light">
+            @Html.DisplayFor(modelItem => item.province)
+        </td>
+        <td class="table-success">
+            @Html.DisplayFor(modelItem => item.postal)
+        </td>
+        <td class="table-primary">
+            @Html.DisplayFor(modelItem => item.relationship)
+        </td>
+        <td class="table-success">
+            @Html.DisplayFor(modelItem => item.employement)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Detail", "Detail", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>
